@@ -54,7 +54,7 @@ dependencies {
 
     ext.checkerFrameworkVersion = '3.21.4-eisop1'
     annotationProcessor "org.checkerframework:linear-checker:0.1-SNAPSHOT"
-    implementation files("../../../../linear-checker-qual-android/build/libs/linear-checker-qual-android.jar")
+    implementation files("/Users/alexliu/projects/linear-checker/linear-checker-qual-android/build/libs/linear-checker-qual-android.jar")
     checkerFrameworkAnnotatedJDK files("../../../../jdk8.jar")
     compileOnly "io.github.eisop:checker-qual-android:${checkerFrameworkVersion}"
     errorproneJavac 'com.google.errorprone:javac:9+181-r4173-1'
