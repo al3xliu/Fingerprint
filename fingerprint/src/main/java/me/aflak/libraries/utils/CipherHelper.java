@@ -18,6 +18,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
+import org.checkerframework.checker.linear.qual.Unique;
 
 /**
  * Created by Omar on 04/08/2017.
@@ -147,7 +148,7 @@ public class CipherHelper {
         }
     }
 
-    public FingerprintManager.CryptoObject getDecryptionCryptoObject(byte[] ivBytes){
+    public FingerprintManager.CryptoObject getDecryptionCryptoObject(byte @Unique({"initialized"})[] ivBytes){
         loadKeyStore();
         if(!hasKey()){
             generateNewKey();
